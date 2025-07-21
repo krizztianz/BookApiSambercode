@@ -40,14 +40,3 @@ func Login(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{"token": token})
 }
-
-// @Summary Check Authenticated User
-// @Tags Users
-// @Security BearerAuth
-// @Produce json
-// @Success 200 {object} map[string]string // Returns username from JWT
-// @Router /api/users/authenticated [get]
-func Authenticated(c *gin.Context) {
-	username, _ := c.Get("username")
-	c.JSON(http.StatusOK, gin.H{"username": username})
-}

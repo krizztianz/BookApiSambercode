@@ -292,22 +292,6 @@ paths:
       summary: Get Books by Category ID
       tags:
       - Categories
-  /api/users/authenticated:
-    get:
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            additionalProperties:
-              type: string
-            type: object
-      security:
-      - BearerAuth: []
-      summary: Check Authenticated User
-      tags:
-      - Users
   /api/users/login:
     post:
       consumes:

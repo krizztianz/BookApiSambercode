@@ -8,5 +8,4 @@ import (
 
 func UserRoutes(r *gin.RouterGroup) {
 	r.POST("/users/login", controllers.Login)
-	r.GET("/users/authenticated", controllers.Authenticated)
 }
